@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>restaurante</Name>
+    <RootNamespace>restaurante</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d7b8b486-55c0-4fbb-b619-19b940fa394d</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>restaurante.settings</DjangoSettingsModule>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app\forms.py" />
+    <Compile Include="app\models.py" />
+    <Compile Include="app\tests.py" />
+    <Compile Include="app\views.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="app\migrations\__init__.py" />
+    <Compile Include="caixa\admin.py" />
+    <Compile Include="caixa\apps.py" />
+    <Compile Include="caixa\migrations\__init__.py" />
+    <Compile Include="caixa\models.py" />
+    <Compile Include="caixa\tests.py" />
+    <Compile Include="caixa\urls.py" />
+    <Compile Include="caixa\views.py" />
+    <Compile Include="caixa\__init__.py" />
+    <Compile Include="cliente\admin.py" />
+    <Compile Include="cliente\apps.py" />
+    <Compile Include="cliente\migrations\__init__.py" />
+    <Compile Include="cliente\models.py" />
+    <Compile Include="cliente\tests.py" />
+    <Compile Include="cliente\urls.py" />
+    <Compile Include="cliente\views.py" />
+    <Compile Include="cliente\__init__.py" />
+    <Compile Include="contas\admin.py" />
+    <Compile Include="contas\apps.py" />
+    <Compile Include="contas\migrations\__init__.py" />
+    <Compile Include="contas\models.py" />
+    <Compile Include="contas\tests.py" />
+    <Compile Include="contas\urls.py" />
+    <Compile Include="contas\views.py" />
+    <Compile Include="contas\__init__.py" />
+    <Compile Include="home\admin.py" />
+    <Compile Include="home\apps.py" />
+    <Compile Include="home\migrations\__init__.py" />
+    <Compile Include="home\models.py" />
+    <Compile Include="home\tests.py" />
+    <Compile Include="home\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="home\views.py" />
+    <Compile Include="home\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="outros\admin.py" />
+    <Compile Include="outros\apps.py" />
+    <Compile Include="outros\migrations\__init__.py" />
+    <Compile Include="outros\models.py" />
+    <Compile Include="outros\tests.py" />
+    <Compile Include="outros\urls.py" />
+    <Compile Include="outros\views.py" />
+    <Compile Include="outros\__init__.py" />
+    <Compile Include="pedido\admin.py" />
+    <Compile Include="pedido\apps.py" />
+    <Compile Include="pedido\migrations\__init__.py" />
+    <Compile Include="pedido\models.py" />
+    <Compile Include="pedido\tests.py" />
+    <Compile Include="pedido\urls.py" />
+    <Compile Include="pedido\views.py" />
+    <Compile Include="pedido\__init__.py" />
+    <Compile Include="produto\admin.py" />
+    <Compile Include="produto\apps.py" />
+    <Compile Include="produto\migrations\__init__.py" />
+    <Compile Include="produto\models.py" />
+    <Compile Include="produto\tests.py" />
+    <Compile Include="produto\urls.py" />
+    <Compile Include="produto\views.py" />
+    <Compile Include="produto\__init__.py" />
+    <Compile Include="restaurante\__init__.py" />
+    <Compile Include="restaurante\settings.py" />
+    <Compile Include="restaurante\urls.py" />
+    <Compile Include="restaurante\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\migrations\" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\static\app\" />
+    <Folder Include="app\static\app\content\" />
+    <Folder Include="app\static\app\fonts\" />
+    <Folder Include="app\static\app\scripts\" />
+    <Folder Include="app\templates\" />
+    <Folder Include="app\templates\app\" />
+    <Folder Include="caixa\" />
+    <Folder Include="caixa\migrations\" />
+    <Folder Include="caixa\templates\" />
+    <Folder Include="cliente\" />
+    <Folder Include="cliente\migrations\" />
+    <Folder Include="cliente\templates\" />
+    <Folder Include="contas\" />
+    <Folder Include="contas\migrations\" />
+    <Folder Include="contas\templates\" />
+    <Folder Include="home\" />
+    <Folder Include="home\migrations\" />
+    <Folder Include="home\static\" />
+    <Folder Include="home\static\css\" />
+    <Folder Include="home\static\img\" />
+    <Folder Include="home\static\img\icons\" />
+    <Folder Include="home\static\js\" />
+    <Folder Include="home\static\vendor\" />
+    <Folder Include="home\static\vendor\animate\" />
+    <Folder Include="home\static\vendor\animsition\" />
+    <Folder Include="home\static\vendor\animsition\css\" />
+    <Folder Include="home\static\vendor\animsition\js\" />
+    <Folder Include="home\static\vendor\bootstrap\" />
+    <Folder Include="home\static\vendor\bootstrap\css\" />
+    <Folder Include="home\static\vendor\bootstrap\js\" />
+    <Folder Include="home\static\vendor\countdowntime\" />
+    <Folder Include="home\static\vendor\css-hamburgers\" />
+    <Folder Include="home\static\vendor\daterangepicker\" />
+    <Folder Include="home\static\vendor\jquery\" />
+    <Folder Include="home\static\vendor\perfect-scrollbar\" />
+    <Folder Include="home\static\vendor\select2\" />
+    <Folder Include="home\templates\" />
+    <Folder Include="home\templates\home\" />
+    <Folder Include="outros\" />
+    <Folder Include="outros\migrations\" />
+    <Folder Include="outros\templates\" />
+    <Folder Include="pedido\" />
+    <Folder Include="pedido\migrations\" />
+    <Folder Include="pedido\templates\" />
+    <Folder Include="produto\" />
+    <Folder Include="produto\migrations\" />
+    <Folder Include="produto\templates\" />
+    <Folder Include="restaurante\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="caixa\templates\caixa.html" />
+    <Content Include="cliente\templates\busca.html" />
+    <Content Include="cliente\templates\cliente.html" />
+    <Content Include="cliente\templates\editar.html" />
+    <Content Include="contas\templates\busca1.html" />
+    <Content Include="contas\templates\contas.html" />
+    <Content Include="contas\templates\editar.html" />
+    <Content Include="contas\templates\pagar.html" />
+    <Content Include="home\static\css\main.css" />
+    <Content Include="home\static\css\simple-sidebar.css" />
+    <Content Include="home\static\css\util.css" />
+    <Content Include="home\static\img\logo.png" />
+    <Content Include="home\static\js\main.js" />
+    <Content Include="home\static\js\map-custom.js" />
+    <Content Include="home\static\vendor\animate\animate.css" />
+    <Content Include="home\static\vendor\animsition\css\animsition.css" />
+    <Content Include="home\static\vendor\animsition\css\animsition.min.css" />
+    <Content Include="home\static\vendor\animsition\js\animsition.js" />
+    <Content Include="home\static\vendor\animsition\js\animsition.min.js" />
+    <Content Include="home\static\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="home\static\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="home\static\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="home\static\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="home\static\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="home\static\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="home\static\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="home\static\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="home\static\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="home\static\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="home\static\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="home\static\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="home\static\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="home\static\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="home\static\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="home\static\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="home\static\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="home\static\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="home\static\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="home\static\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="home\static\vendor\bootstrap\js\popper.js" />
+    <Content Include="home\static\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="home\static\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="home\static\vendor\countdowntime\countdowntime.js" />
+    <Content Include="home\static\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="home\static\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="home\static\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="home\static\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="home\static\vendor\daterangepicker\moment.js" />
+    <Content Include="home\static\vendor\daterangepicker\moment.min.js" />
+    <Content Include="home\static\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="home\static\vendor\jquery\jquery.js" />
+    <Content Include="home\static\vendor\jquery\jquery.min.js" />
+    <Content Include="home\static\vendor\jquery\jquery.min.map" />
+    <Content Include="home\static\vendor\jquery\jquery.slim.js" />
+    <Content Include="home\static\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="home\static\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="home\static\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="home\static\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="home\static\vendor\select2\select2.css" />
+    <Content Include="home\static\vendor\select2\select2.js" />
+    <Content Include="home\static\vendor\select2\select2.min.css" />
+    <Content Include="home\static\vendor\select2\select2.min.js" />
+    <Content Include="home\templates\base.html" />
+    <Content Include="home\templates\home\home.html" />
+    <Content Include="home\templates\home\login.html" />
+    <Content Include="outros\templates\outros.html" />
+    <Content Include="pedido\templates\abrir.html" />
+    <Content Include="pedido\templates\busca2.html" />
+    <Content Include="pedido\templates\pedido.html" />
+    <Content Include="produto\templates\buscar_refe.html" />
+    <Content Include="produto\templates\buscar_prod.html" />
+    <Content Include="produto\templates\edit_refe.html" />
+    <Content Include="produto\templates\edit_prod.html" />
+    <Content Include="produto\templates\refeicao.html" />
+    <Content Include="produto\templates\produto.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="db.sqlite3" />
+    <Content Include="app\static\app\content\bootstrap.css" />
+    <Content Include="app\static\app\content\bootstrap.min.css" />
+    <Content Include="app\static\app\content\site.css" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\static\app\scripts\bootstrap.js" />
+    <Content Include="app\static\app\scripts\bootstrap.min.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.min.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.min.map" />
+    <Content Include="app\static\app\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.min.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="app\static\app\scripts\modernizr-2.6.2.js" />
+    <Content Include="app\static\app\scripts\respond.js" />
+    <Content Include="app\static\app\scripts\respond.min.js" />
+    <Content Include="app\static\app\scripts\_references.js" />
+    <Content Include="app\templates\app\about.html" />
+    <Content Include="app\templates\app\contact.html" />
+    <Content Include="app\templates\app\index.html" />
+    <Content Include="app\templates\app\layout.html" />
+    <Content Include="app\templates\app\login.html" />
+    <Content Include="app\templates\app\loginpartial.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.html">
+      <SubType>WebBrowser</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.6</Version>
+      <Description>env (Python 3.6 (32-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X86</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

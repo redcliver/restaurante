@@ -1,0 +1,28 @@
+﻿{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar menu-lateral">
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/home">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+         </nav>
+        </div>
+    </div>
+<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3 main-fundo">
+    <section class="row text-center placeholders">
+        <div class="jumbotron busca">
+            <div class="container">
+                <img src="{% static '/img/home.png' %}" />
+                <hr />
+                <h1>{{msg}}</h1>
+                <span class="line"></span>
+                <h1>{{msg1}}</h1>
+            </div>
+        </div>
+    </section>
+</main>
+        {% endblock %}
