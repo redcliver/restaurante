@@ -1,6 +1,6 @@
 ﻿{% extends 'base.html' %}
 {% block body %}
-{% load static %}
+{% load staticfiles %}
 <style type="text/css" >
     ul {
         list-style-type: none;
@@ -34,20 +34,16 @@
     <section class="row text-center placeholders">
         <div class="jumbotron busca">
             <div class="container">
-                <img src="{% static '/img/caixa.png' %}" />
-                <hr/>
                 <h3>Total em caixa : R$ {{caixa.total}}</h3>
                 <hr />
-                <ul>
-                    <li><a href="/caixa/fechar"><img src="{% static '/img/fechar.png' %}" /></a></li>
-                    <li><a href="/caixa/retirada"><img src="{% static '/img/retirada.png' %}" /></a></li>
-                </ul>
+                <h3>Total rec. em Dinheiro : R$ {{total_dim}}</h3>
                 <hr />
-                <ul>
-                    <li><a href="/caixa/inf_geral"><img src="{% static '/img/inf_geral.png' %}" /></a></li>
-                    <li><a href="/caixa/inf_mens"><img src="{% static '/img/inf_men.png' %}" /></a></li>
-                    <li><a href="/caixa/inf_sem"><img src="{% static '/img/inf_sem.png' %}" /></a></li>
-                </ul>
+                <h3>Total rec. em C. Credito : R$ {{total_cc}}</h3>
+                <hr />
+                <h3>Total rec. em C. Debito : R$ {{total_cd}}</h3>
+                <hr />
+                <h5>Dados desde {{dia_1}}</h5>
+                <a href="/home" class="btn btn-primary float-right" type="submit" >Fechar</a>
             </div>
         </div>
     </section>

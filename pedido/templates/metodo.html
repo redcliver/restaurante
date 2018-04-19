@@ -19,6 +19,7 @@
         <div class="jumbotron busca">
             <div class="container">
                 <form method="post" action="/pedido/finalizar">
+                    {% csrf_token %}
                     <input type="hidden" name="pedido_id" value="{{pedido_obj.id}}">
                     <h1>Metodo de Pagamento</h1>
                     <hr />

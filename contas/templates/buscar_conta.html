@@ -23,26 +23,25 @@
             <div class="container">
                 <h1>Busca Conta</h1>
                 <hr />
-                <form method="post" action="/contas/pagar">
-                {% csrf_token %}
+                <form method="get">
                 <div class="form-row">
                     <div class="form-group col-md-10">
                         <label for="inputName">Conta<strong>*</strong></label>
-                        <select autofocus name="conta_id" class="form-control" required>
+                        <select autofocus name="c_id" class="form-control" required>
                             <option disabled selected> -- Conta -- Data -- Valor </option>
-                            {% for conta in contas %}
-                            <option value={{conta.id}}>{{conta.nome}} -- {{conta.data|date:"d/m/Y"}} -- R$ {{conta.valor}}</option>
+                            {% for conta in c_obj %}
+                            <option value="{{conta.id}}">{{conta.nome}} -- {{conta.data|date:"d/m/Y"}} -- R$ {{conta.valor}}</option>
                             {% endfor %}
                         </select>
                     </div>
                 </div>
                 <br />
-                <button type="submit" class="btn btn-primary float-right">Buscar</button>
+                <button type="submit" class="btn btn-primary float-right" formaction="/contas/buscar">Buscar</button>
             </form>
             </div>
             <form method="post">
                 {% csrf_token %}
-                {% if contas %}
+                {% if c1 %}
                 <div class="row">
                     <table class="table">
                         <thead>
@@ -55,14 +54,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for conta in contas %}
+                            {% for conta in c1 %}
                             <tr>
                                 <td>{{conta.nome}}</td>
                                 <td>R$ {{conta.valor}}</td>
                                 <td>{{conta.descricao}}</td>
                                 <td>{{conta.get_estado_display}}</td>
                                 <td>{{conta.data|date:"d/m/Y"}}</td>
-                                <td><button class="btn btn-default" value={{conta.id}} name="id" type="submit">Editar</button></td>
+                                <td><button class="btn btn-default" value="{{conta.id}}" name="id" type="submit">Editar</button></td>
                             </tr>
                             {% endfor %}
                         </tbody>

@@ -159,7 +159,7 @@
     <Content Include="cliente\templates\busca.html" />
     <Content Include="cliente\templates\cliente.html" />
     <Content Include="cliente\templates\editar.html" />
-    <Content Include="contas\templates\busca1.html" />
+    <Content Include="contas\templates\buscar.html" />
     <Content Include="contas\templates\contas.html" />
     <Content Include="contas\templates\editar.html" />
     <Content Include="contas\templates\pagar.html" />
@@ -223,6 +223,7 @@
     <Content Include="outros\templates\outros.html" />
     <Content Include="pedido\templates\abrir.html" />
     <Content Include="pedido\templates\busca2.html" />
+    <Content Include="pedido\templates\metodo.html" />
     <Content Include="pedido\templates\pedido.html" />
     <Content Include="produto\templates\buscar_refe.html" />
     <Content Include="produto\templates\buscar_prod.html" />

@@ -1,6 +1,6 @@
 ﻿{% extends 'base.html' %}
 {% block body %}
-{% load static %}
+{% load staticfiles %}
 <style type="text/css" >
     ul {
         list-style-type: none;
@@ -34,20 +34,20 @@
     <section class="row text-center placeholders">
         <div class="jumbotron busca">
             <div class="container">
-                <img src="{% static '/img/caixa.png' %}" />
-                <hr/>
-                <h3>Total em caixa : R$ {{caixa.total}}</h3>
-                <hr />
-                <ul>
-                    <li><a href="/caixa/fechar"><img src="{% static '/img/fechar.png' %}" /></a></li>
-                    <li><a href="/caixa/retirada"><img src="{% static '/img/retirada.png' %}" /></a></li>
-                </ul>
-                <hr />
-                <ul>
-                    <li><a href="/caixa/inf_geral"><img src="{% static '/img/inf_geral.png' %}" /></a></li>
-                    <li><a href="/caixa/inf_mens"><img src="{% static '/img/inf_men.png' %}" /></a></li>
-                    <li><a href="/caixa/inf_sem"><img src="{% static '/img/inf_sem.png' %}" /></a></li>
-                </ul>
+                 <form method="POST" class="col-md-12 col-md-offset-3">
+                    {% csrf_token %}
+                    <h3>Valor total em caixa : R$ {{total}}</h3>
+                    <br />
+                    <br />
+                    Valor da retirada : <input class="form-control col-md-4 " type="number" name="retirada" step="0.01" autofocus required/>
+                    <br />
+                    <br />
+                    Motivo : <input class="form-control col-md-6 " type="text" name="motivo" required />
+                    <br />
+                    <br />
+                    <button class="btn btn-primary" type="submit">Salvar</button>
+                    
+                </form>
             </div>
         </div>
     </section>
