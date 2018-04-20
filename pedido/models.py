@@ -29,8 +29,8 @@ class pedido(models.Model):
     )
     METODO = (
         ('1', 'Dinheiro'),
-        ('2', 'Cartao Debito'),
-        ('3', 'Cartao Credito'),
+        ('2', 'C. Debito'),
+        ('3', 'C. Credito'),
     )
     id = models.AutoField(primary_key=True)
     cliente_pedido = models.ForeignKey(cliente)

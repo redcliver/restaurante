@@ -153,8 +153,8 @@ def metodo(request):
         if request.method == 'POST' and request.POST.get('pedido_id') != None:
             pedido_id = request.POST.get('pedido_id')
             pedido_obj = pedido.objects.filter(id=pedido_id).get()
-            return render(request, 'metodo.html', {'title':'Meotodo de pagamento', 'pedido_obj':pedido_obj})
-        return render(request, 'metodo.html', {'title':'Meotodo de pagamento'})
+            return render(request, 'metodo.html', {'title':'Metodo de pagamento', 'pedido_obj':pedido_obj})
+        return render(request, 'metodo.html', {'title':'Metodo de pagamento'})
     else:
         return render(request, 'home/erro.html', {'title':'Erro'})
 
@@ -164,20 +164,24 @@ def finalizar(request):
         if request.method == 'POST' and request.POST.get('pedido_id') != None and request.POST.get('metodo') != None:
             pedido_id = request.POST.get('pedido_id')
             met = request.POST.get('metodo')
-            data = timezone.now()
-            pedido_obj = pedido.objects.filter(id=pedido_id).get()
-            caixa_atual = caixa_geral.objects.latest('id')
-            desc = "Ref. pedido N: "+ str(pedido_obj.id) +"."
-            total = caixa_atual.total + pedido_obj.total
-            op_caixa = caixa_geral(tipo=1, total=total, desc=desc)
-            op_caixa.save()
-            pedido_obj.metodo = met
-            pedido_obj.estado = 2
-            pedido_obj.data_fechamento = data
-            pedido_obj.save()
-            msg = "Pedido finalizado com sucesso!"
-            return render(request, 'home/home.html', {'title':'Home', 'msg':msg})
-        return render(request, 'metodo.html', {'title':'Meotodo de pagamento'})
+            if met == 1:
+                pedido_obj = pedido.objects.filter(id=pedido_id).get()
+            return render(request, 'dinheiro.html', {'title':'Dinheiro', 'pedido_obj':pedido_obj})
+            else:
+                data = timezone.now()
+                pedido_obj = pedido.objects.filter(id=pedido_id).get()
+                caixa_atual = caixa_geral.objects.latest('id')
+                desc = "Ref. pedido N:"+ str(pedido_obj.id) +", pag:"+str(pedido_obj.get_metodo_display)+", total:R$"+str(pedido_obj.total)+"."
+                total = caixa_atual.total + pedido_obj.total
+                op_caixa = caixa_geral(tipo=1, total=total, desc=desc)
+                op_caixa.save()
+                pedido_obj.metodo = met
+                pedido_obj.estado = 2
+                pedido_obj.data_fechamento = data
+                pedido_obj.save()
+                msg = "Pedido finalizado com sucesso!"
+                return render(request, 'home/home.html', {'title':'Home', 'msg':msg})
+        return render(request, 'metodo.html', {'title':'Metodo de pagamento'})
     else:
         return render(request, 'home/erro.html', {'title':'Erro'})
 
@@ -226,5 +230,34 @@ def del_refe(request):
             pro = produto.objects.all().order_by('nome')
             ref = refeicao.objects.all().order_by('nome')
             return render(request, 'abrir.html', {'title':'Abrir Pedido', 'cli_obj':cli_obj, 'pedido_obj':pedido_obj, 'refes1':refes1, 'prods1':prods1, 'pro':pro, 'ref':ref})    
+    else:
+        return render(request, 'home/erro.html', {'title':'Erro'})
+
+def troco(request):
+    if request.user.is_authenticated():
+        if request.method == 'GET' and request.GET.get('recebido') != None:
+            rec = request.GET.get('recebido')
+            pedido_id = request.GET.get('pedido_id')
+            pedido_obj = pedido.objects.filter(id=pedido_id).get()
+            troco = pedido_obj.total - Decimal(rec)
+                    
+            return render(request, 'troco.html', {'title':'Troco do pagamento', 'pedido_obj':pedido_obj, 'rec':rec, 'troco':troco})
+        elif request.method == 'POST' and request.POST.get('pedido_id') != None:
+            data = timezone.now()
+            caixa_atual = caixa_geral.objects.latest('id')
+            pedido_id = request.POST.get('pedido_id')
+            troco = request.POST.get('troco')
+            pedido_obj = pedido.objects.filter(id=pedido_id).get()
+            desc = "Ref. pedido N:"+ str(pedido_obj.id) +", pag:"+ str(pedido_obj.get_metodo_diplay) +", total:R$"+ str(pedido_obj.total) +", troco:R$"+str(troco)+"."
+            total = caixa_atual.total + pedido_obj.total
+            op_caixa = caixa_geral(tipo=1, total=total, desc=desc)
+            op_caixa.save()
+            pedido_obj.metodo = met
+            pedido_obj.estado = 2
+            pedido_obj.data_fechamento = data
+            pedido_obj.save()
+            msg = "Pedido finalizado com sucesso!"
+            return render(request, 'home/home.html', {'title':'Home', 'msg':msg})
+    return render(request, 'troco.html', {'title':'Troco do pagamento'})
     else:
         return render(request, 'home/erro.html', {'title':'Erro'})
