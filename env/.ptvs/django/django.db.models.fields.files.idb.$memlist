@@ -1,10 +1,10 @@
 ImageFileDescriptor
-RemovedInDjango20Warning
+checks
 FieldFile
 _
 forms
 posixpath
-force_str
+validate_image_file_extension
 os
 six
 Field
@@ -12,9 +12,10 @@ File
 datetime
 ImageFieldFile
 FileField
-checks
+RemovedInDjango20Warning
 signals
 ImageField
+force_str
 FileDescriptor
 warnings
 default_storage

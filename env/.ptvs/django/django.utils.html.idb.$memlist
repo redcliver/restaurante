@@ -1,4 +1,3 @@
-escapejs
 conditional_escape
 linebreaks
 unicode_literals
@@ -8,7 +7,7 @@ format_html
 DOTS
 force_text
 WRAPPING_PUNCTUATION
-format_html_join
+RFC3986_GENDELIMS
 urlize
 escape
 quote
@@ -19,9 +18,9 @@ six
 RFC3986_SUBDELIMS
 MLStripper
 urlencode
-re
-HTMLParseError
-TRAILING_PUNCTUATION_CHARS
+mark_safe
+simple_email_re
+escapejs
 strip_spaces_between_tags
 urlunsplit
 HTMLParser
@@ -30,14 +29,16 @@ keep_lazy_text
 unencoded_ampersands_re
 SafeData
 _js_escapes
-RFC3986_GENDELIMS
+format_html_join
 avoid_wrapping
 keep_lazy
 simple_url_re
 SafeText
+TRAILING_PUNCTUATION_RE
 normalize_newlines
 smart_urlquote
 urlsplit
 word_split_re
 _strip_once
-mark_safe
+re
+HTMLParseError

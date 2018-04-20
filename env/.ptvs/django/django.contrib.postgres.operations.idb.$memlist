@@ -1,8 +1,8 @@
-UnaccentExtension
 Operation
-HStoreExtension
+register_hstore_handler
+CITextExtension
 CreateExtension
 TrigramExtension
-register_type_handlers
+UnaccentExtension
 BtreeGinExtension
-CITextExtension
+HStoreExtension

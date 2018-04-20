@@ -20,23 +20,26 @@
             <div class="container">
                 <h1>Troco</h1>
                 <hr />
-                <form method="POST">
-                    {% csrf_token %}
-                    <input type="hidden" name="pedido_id" value="{{pedido_obj.id}}" />
-                    <input type="hidden" name="rec" value="{{rec}}" />
-                    <input type="hidden" name="troco" value="{{troco}}" />
-                <h3 class="total"> Total: {{pedido_obj.total}}</h3>
-                    <h3>
-                    Recebido:
-                    <input class="form-control" type="number" step="0.01" value={{rec}} readonly/>
-                    <br>
-                    Troco:
-                    <input class="form-control" value={{troco}} readonly></h3>
-                    <br />
-                    <button autofocus class="btn btn-primary" type="submit">Finalizar</button>
-                </form>
+                <div class="form-row">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="pedido_id" value="{{pedido_obj.id}}" />
+                        <input type="hidden" name="rec" value="{{rec}}" />
+                        <input type="hidden" name="troco" value="{{troco}}" />
+                        <h3 class="total"> Total: R$ {{pedido_obj.total}}</h3>
+                        <h3>
+                            Recebido:
+                            <input class="form-control" value="R$ {{rec}}" readonly />
+                            <br>
+                            Troco:
+                            <input class="form-control" value="R$ {{troco}}" readonly>
+                        </h3>
+                        <br />
+                        <button autofocus class="btn btn-primary" type="submit">Finalizar</button>
+                    </form>
+                </div>
+                </div>
             </div>
-        </div>
     </section>
 </main>
         {% endblock %}

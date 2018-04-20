@@ -155,13 +155,18 @@
     <Folder Include="restaurante\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
     <Content Include="caixa\templates\caixa.html" />
+    <Content Include="caixa\templates\fechar.html" />
+    <Content Include="caixa\templates\inf_geral.html" />
+    <Content Include="caixa\templates\retirada.html" />
     <Content Include="cliente\templates\busca.html" />
     <Content Include="cliente\templates\cliente.html" />
     <Content Include="cliente\templates\editar.html" />
-    <Content Include="contas\templates\buscar.html" />
+    <Content Include="contas\templates\buscar_conta.html" />
     <Content Include="contas\templates\contas.html" />
-    <Content Include="contas\templates\editar.html" />
+    <Content Include="contas\templates\editar_conta.html" />
     <Content Include="contas\templates\pagar.html" />
     <Content Include="home\static\css\main.css" />
     <Content Include="home\static\css\simple-sidebar.css" />
@@ -225,6 +230,7 @@
     <Content Include="pedido\templates\busca2.html" />
     <Content Include="pedido\templates\metodo.html" />
     <Content Include="pedido\templates\pedido.html" />
+    <Content Include="Procfile" />
     <Content Include="produto\templates\buscar_refe.html" />
     <Content Include="produto\templates\buscar_prod.html" />
     <Content Include="produto\templates\edit_refe.html" />

@@ -1,7 +1,6 @@
 migrations
 management
 default_app_config
-_authenticate_with_backend
 BACKEND_SESSION_KEY
 tokens
 update_session_auth_hash

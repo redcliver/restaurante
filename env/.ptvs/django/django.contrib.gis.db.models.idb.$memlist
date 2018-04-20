@@ -6,7 +6,6 @@ FieldDoesNotExist
 MultiPolygonField
 Func
 Prefetch
-warn_about_renamed_method
 MultiLineStringField
 cached_property
 URLField
@@ -93,7 +92,7 @@ functions
 Subquery
 lookups
 constants
-split_identifier
+warn_about_renamed_method
 FloatField
 manager
 Case

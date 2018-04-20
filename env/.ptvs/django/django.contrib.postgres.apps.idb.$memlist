@@ -4,8 +4,8 @@ TrigramSimilar
 Unaccent
 connections
 _
-register_type_handlers
+PostgresConfig
+register_hstore_handler
 SearchLookup
 AppConfig
 TextField
-PostgresConfig

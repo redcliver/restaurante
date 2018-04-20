@@ -5,7 +5,6 @@ BooleanField
 b64encode
 Func
 Prefetch
-split_identifier
 cached_property
 URLField
 SET_NULL

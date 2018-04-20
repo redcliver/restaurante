@@ -4,7 +4,6 @@ forms
 AdminTimeWidget
 copy
 mark_safe
-AdminFileWidget
 FilteredSelectMultiple
 force_text
 six
@@ -17,5 +16,5 @@ smart_urlquote
 NoReverseMatch
 AdminSplitDateTime
 CASCADE
-ValidationError
+AdminFileWidget
 url_params_from_lookup_dict

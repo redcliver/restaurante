@@ -6,8 +6,8 @@ forms
 hstore
 copy
 JSONField
-MultiWidget
-HStoreField
+mark_safe
+SimpleArrayField
 jsonb
 six
 SplitArrayWidget
@@ -19,8 +19,9 @@ RangeWidget
 DateRangeField
 ArrayMinLengthValidator
 SplitArrayField
+MultiWidget
 json
-SimpleArrayField
+HStoreField
 chain
 DateTimeRangeField
 ValidationError

@@ -1,4 +1,4 @@
-func_accepts_kwargs
+unicode_literals
 pretty_name
 conditional_escape
 mark_safe
@@ -6,11 +6,10 @@ cached_property
 Textarea
 six
 BoundField
+python_2_unicode_compatible
 func_supports_parameter
-format_html
 datetime
 __all__
-unicode_literals
 _
 RemovedInDjango21Warning
 warnings
@@ -19,4 +18,4 @@ html_safe
 TextInput
 force_text
 flatatt
-python_2_unicode_compatible
+format_html

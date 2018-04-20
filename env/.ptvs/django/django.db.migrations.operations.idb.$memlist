@@ -13,7 +13,6 @@ fields
 RenameModel
 AlterModelManagers
 base
-utils
 DeleteModel
 SeparateDatabaseAndState
 CreateModel

@@ -1,10 +1,10 @@
-PID_CODEPAGE
+PID_CREATE_DTM
 range
 MSIError
-_Unspecified
+PID_CODEPAGE
 MSICOLINFO_NAMES
 sequence
-PID_CREATE_DTM
+_Unspecified
 add_data
 isinstance
 MSIMODIFY_VALIDATE_DELETE

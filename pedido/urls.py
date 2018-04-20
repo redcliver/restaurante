@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^del_refe', views.del_refe),
     url(r'^del_prod', views.del_produto),
     url(r'^metodo', views.metodo),
+    url(r'^troco', views.troco),
     url(r'^finalizar', views.finalizar),
     ]

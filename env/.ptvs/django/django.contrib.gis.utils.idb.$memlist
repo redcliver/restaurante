@@ -1,5 +1,6 @@
 LayerMapping
 add_srs_entry
+HAS_GDAL
 ogrinfo
 precision_wkt
 srs

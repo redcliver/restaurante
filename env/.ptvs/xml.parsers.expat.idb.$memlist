@@ -6,10 +6,10 @@ expat_CAPI
 features
 XMLParserType
 ParserCreate
-XML_PARAM_ENTITY_PARSING_UNLESS_STANDALONE
+version_info
 model
 EXPAT_VERSION
 ExpatError
 ErrorString
 errors
-version_info
+XML_PARAM_ENTITY_PARSING_UNLESS_STANDALONE
