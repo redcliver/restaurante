@@ -37,8 +37,8 @@
                     <div class="form-group col-md-6">
                         <label for="inputServico">Refeicao</label>
                         <select name="refe_id" class="form-control">
-                            {% for refeicao in ref %}
                             <option disabled selected> -- Refeicoes -- </option>
+                            {% for refeicao in ref %}
                             <option value={{refeicao.id}}>{{refeicao.nome}}</option>
                             {% endfor %}
                         </select>
@@ -52,8 +52,8 @@
                     <div class="form-group col-md-6">
                         <label for="inputServico">Produto</label>
                         <select name="prod_id" class="form-control">
-                            {% for produtos in pro %}
                             <option disabled selected> -- Produtos -- </option>
+                            {% for produtos in pro %}
                             <option value={{produtos.id}}>{{produtos.nome}}</option>
                             {% endfor %}
                         </select>
