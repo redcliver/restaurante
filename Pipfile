@@ -30,7 +30,7 @@ wrapt = "==1.10.11"
 django-heroku = "*"
 reportlab = "*"
 Django = "==1.11"
-Pillow = "==4.2.1"
+Pillow = "==6.2.0"
 PyYAML = "==3.12"
 
 [requires]
